@@ -1,1 +1,1 @@
-<p>Default Page under Exercises</p>
+<p>Default Page under Exercises!</p>

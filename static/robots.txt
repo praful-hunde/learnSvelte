@@ -1,10 +1,2 @@
 User agent:*
 Allow:/
-
-User agent:Googlebotg
-Allow:/
-
-change 1:
-Allow:/
-
-change 2:
