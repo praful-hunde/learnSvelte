@@ -1,0 +1,8 @@
+User agent:*
+<<<<<<< Updated upstream
+Allow:/
+
+user agent:Googlebot
+=======
+>>>>>>> Stashed changes
+Allow:/
