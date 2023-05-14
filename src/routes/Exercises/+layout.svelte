@@ -19,6 +19,8 @@
                 .filter((item) => item !== '/Exercises/');
 
 				console.log("pages",pages);
+
+				pages[0] = '/Exercises/Adding%20data/test';
 	}
 </script>
 
@@ -60,10 +62,10 @@
 	}
 
 	/* Active/current link */
-	.sidebar a.active {
+	/* .sidebar a.active {
 		background-color: #04aa6d;
 		color: white;
-	}
+	} */
 
 	/* Links on mouse-over */
 	.sidebar a:hover:not(.active) {
