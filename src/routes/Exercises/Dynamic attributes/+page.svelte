@@ -5,7 +5,7 @@
 
 <h1>Dynamic Attributes</h1>
 
-<img {src} alt="A robot" height="321" width="254" title={src} />
+<img src={src} alt="A robot" height="321" width="254" title={src} />
 <img {src} alt="A robot" height="321" width="254" title={src} />
 <!--This is short hand to above-->
 <!-- <img src={src2} alt="A robot" height="321" width="254" title="{src2}">
