@@ -19,8 +19,6 @@
                 .filter((item) => item !== '/Exercises/');
 
 				console.log("pages",pages);
-
-				pages[0] = '/Exercises/Adding%20data/test';
 	}
 </script>
 
