@@ -31,7 +31,8 @@
 	{count === 1 ? 'time' : 'times'}
 </button>
 
-<p>Svelte generates code to update the DOM, on assignment of count.</p>
+<p>Svelte compiler generates code to update the DOM.<br> When count value is assigned the DOM is updated.<br>
+	This happens by code injected during compilation which I guess override assignment operation of count variable.</p>
 
 <p>
 	Not to self: On revisit to this route the count is re initialized to zero. There shall be a way to

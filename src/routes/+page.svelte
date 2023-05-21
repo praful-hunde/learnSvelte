@@ -8,9 +8,10 @@
     The source code is available <a href="https://github.com/praful-hunde/learnSvelte">https://github.com/praful-hunde/learnSvelte</a> <br> 
 
     Whenever I get time, I try to follow tutorial and add new page for each topic in /routes/Exercises sub directory.<br>
+    This is a great way to keep all examples code and notes in one place.<br><br>
     Of course I do git commit/push , and Magic Begins!<br> 
     Magically Vercel detects the push on github, build the code and deploy. Site is alway updated.<br>
-    Did I mention, CI/CD and hosting did not cost a penny. 
+    Did I tell CI/CD and hosting did not cost a penny? 
   </p>
   
  
