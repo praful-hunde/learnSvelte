@@ -2,7 +2,7 @@
 	import Nested from '../../../components/Nested.svelte';
 </script>
 
-<p>This is parent element.</p>
+<p>This is parent component.</p>
 <Nested />
 <a href="https://svelte.dev/tutorial/nested-components">Nested components</a>
 
