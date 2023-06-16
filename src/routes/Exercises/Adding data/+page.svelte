@@ -2,6 +2,6 @@
 
 <div>Hello {name}!</div>
 <script lang="ts">
-    let name = "Prafulla!";
+    let name = "Prafulla Hunde!";
 </script>
 
