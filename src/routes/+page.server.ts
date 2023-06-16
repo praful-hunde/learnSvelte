@@ -1,5 +1,6 @@
 
   export async function load() {
+    console.log("Running +page.server.ts");
     return {    
         staticText: `
           Each page under /routes/Exercises sub directories is for trying <a href="https://svelte.dev/tutorial/basics">Svelte tutorial</a><br>

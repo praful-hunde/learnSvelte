@@ -35,7 +35,7 @@
 	This happens by code injected during compilation which I guess override assignment operation of count variable.</p>
 
 <p>
-	Not to self: On revisit to this route the count is re initialized to zero. There shall be a way to
+	Note to self: On revisit to this route the count is re initialized to zero. There shall be a way to
 	prevent re initialization and catch the page.
 
 	 EXAMPLE Links

@@ -1,5 +1,5 @@
 <script lang="ts">
-	 import { browser } from '$app/environment'; 
+	import { browser } from '$app/environment'; 
 	import { getPages } from '$lib/getPagesUtil';
 
 	let pages :string[] = [];
@@ -24,7 +24,7 @@
 
 <div class="wrapper">
 	<div id="nav" role="navigation" class="sidebar">
-		<ul>
+		<ul class="sub-menu">
 			{#if browser}
 			{#each pages as page}
 				<li>
@@ -44,7 +44,7 @@
 	.sidebar {
 		margin: 0;
 		padding: 0;
-		width: 200px;
+		width: 15%;
 		background-color: #f1f1f1;
 		position: fixed;
 		height: 100%;
@@ -76,7 +76,16 @@
 	}
 
 	.content {
-		flex: 1;
-		padding-left: 210px;
+		padding-left: 16%;
+		min-height: 100%;
+		height: 100%;
+		width:100% ;
+		
 	}
+
+	.sub-menu li {
+    font-size: 1em;
+    padding: .25em 1em;
+    line-height: 1em;
+}
 </style>
