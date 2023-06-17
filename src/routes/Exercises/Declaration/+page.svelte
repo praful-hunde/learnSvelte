@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+
 	let count: number = 0;
 	let countDouble: number = 0;
 
@@ -10,7 +12,9 @@
 	$: console.log('Reactive statement ' + count);
 
 	$: {
-		alert('Reactive block ' + count);
+		if (browser) {
+			alert('Reactive block ' + count);
+		}
 	}
 </script>
 

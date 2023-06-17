@@ -16,15 +16,16 @@ export const getPages = (url: string, modules: Record<string, unknown>): string[
 
     console.log("Inside getPages")
     const directory = url
-    .replace(/.*\/(.*?)\+layout\.svelte\.(\w+)\.js/, "/$1/")
+      .replace(/.*\/(.*?)\+layout\.svelte\.(\w+)\.js/, "/$1/")
       .replace(/(.*?)\/src\/routes\//, '/')
       .replace(/(.*?)\/immutable\/pages\//, '/')
       .replace(/(.*?)\/immutable\/entry\//, '/')
       .replace(/(.*?)\/immutable\/nodes\//, '/')
-      .replace(/(.*?)\/var\/task\//, '/') // Vercel
-      .replace(/\/([^/])*.svelte.*/, '/')
+      .replace(/(.*?)\/var\/task\//, '/')      
+      .replace(/(.*?)\/entries\/pages\//, '/')
       .replace('+layout.server.ts', '')
-      .replace('_layout.server.ts.js', '')
+      .replace('_layout.server.ts.js', '') 
+			.replace(/\/([^/])*.svelte.*/, '/')
       
       
      
@@ -34,6 +35,7 @@ export const getPages = (url: string, modules: Record<string, unknown>): string[
     const excludedEntries = ['./+layout.svelte', './+page.svelte'];
 
     const paths = Object.keys(modules)
+    .filter(entry => !excludedEntries.includes(entry))
       // Convert relative path to absolute path
       .map((path) => path.replace(/^(.\/)/, directory))
       // Filter private modules (default regular expression in SvelteKit)
@@ -44,6 +46,6 @@ export const getPages = (url: string, modules: Record<string, unknown>): string[
       .map((path) => path.replace(/(\/index)?(@.*)?.svelte/, ''))
       // Set empty path string to '/' ('./index.svelte' is converted to '')
       .map((path) => path || '/')     //.sort();    
-      .filter(entry => !excludedEntries.includes(entry));
+      
     return paths;
   };
