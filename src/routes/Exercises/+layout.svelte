@@ -1,37 +1,20 @@
 <script lang="ts">
-	import { browser } from '$app/environment'; 
-	import { getPages } from '$lib/getPagesUtil';
+/** @type {import('./$types').LayoutData} */
+ export let data;
 
-	let pages :string[] = [];
-	
-	if(browser)
-	{
-
-	const { url } = import.meta;
-	const modules = import.meta.glob('./**/*.svelte',{ eager: true }); // Include subfolder
-	//const modules = import.meta.glob('./**.svelte'); // Current folder only
-
-	console.log("url = ",url);
-	console.log("modules = ", modules);
-
-	 pages = getPages(url, modules)
-                .map((str) => str.replace(/\+page$/, ''))
-                .filter((item) => item !== '/Exercises/');
-
-				console.log("pages",pages);
-	}
+ console.log("data.links")
+  console.log(data.links);
+  console.log(JSON.stringify(data));
 </script>
 
 <div class="wrapper">
 	<div id="nav" role="navigation" class="sidebar">
 		<ul class="sub-menu">
-			{#if browser}
-			{#each pages as page}
+			{#each data.links as page}
 				<li>
 					<a href={page}>{page.replace(/\//g, '').replace('Exercises', '')}</a>
 				</li>
 			{/each}
-			{/if}
 		</ul>
 		
 	</div>

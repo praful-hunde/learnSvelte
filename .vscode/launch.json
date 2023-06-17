@@ -11,6 +11,14 @@
             "url": "http://127.0.0.1:5173",
             "webRoot": "${workspaceFolder}",
        
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Vercel",
+            "url": "https://learn-svelte-roan.vercel.app/",
+            "webRoot": "${workspaceFolder}",
+       
         }
     ]
 }
